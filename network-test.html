@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network Connection Test | Game Galaxy</title>
+<link rel="stylesheet" href="style.css">
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+ document.getElementById("hostName").textContent=window.location.hostname||"localhost";
+ document.getElementById("portNumber").textContent=window.location.port || (window.location.protocol==='https:'?'443':'80');
+ document.getElementById("protocol").textContent=window.location.protocol.replace(':','').toUpperCase();
+ const lastLaunch=localStorage.getItem('lastLaunch');
+ document.getElementById('lastLaunch').textContent=lastLaunch||'First Launch';
+ localStorage.setItem('lastLaunch',new Date().toLocaleString());
+});
+</script>
+</head>
+<body>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html"><span class="brand-badge">GG</span>Game Galaxy</a>
+</div>
+</header>
+<main>
+<section class="page-header">
+<h1>Network Connection Test</h1>
+<p>Current browser connection and environment details.</p>
+</section>
+<section class="section">
+<div class="container">
+<div class="form-card">
+<h2>Connection Information</h2>
+<ol>
+<li><strong>Local Host Name:</strong> <span id="hostName">Loading...</span></li>
+<li><strong>Current Communication Port:</strong> <span id="portNumber">Loading...</span></li>
+<li><strong>Current Transmission Protocol:</strong> <span id="protocol">Loading...</span></li>
+<li><strong>Last Time Launched:</strong> <span id="lastLaunch">Loading...</span></li>
+</ol>
+</div>
+</div>
+</section>
+</main>
+</body>
+</html>

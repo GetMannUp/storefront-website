@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Game Galaxy | Checkout</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<body>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-badge">GG</span>Game Galaxy</a><nav><ul>
+<li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="cart.html">Cart (<span data-cart-count>0</span>)</a></li><li><a class="active" href="checkout.html">Checkout</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+</ul></nav></div></header>
+<main>
+<section class="page-header"><div class="container"><h1>Checkout</h1><p>Enter shipping and purchase information. Required fields are checked with JavaScript before the demo order can be completed.</p></div></section>
+<section class="section"><div class="container form-grid">
+<form id="checkoutForm" class="form-card" novalidate>
+<h2>Shipping Information</h2>
+<div class="field"><label for="shippingName">Full Name <span class="required">*</span></label><input id="shippingName" name="shippingName" autocomplete="name"><div id="shippingNameError" class="error-text"></div></div>
+<div class="field"><label for="street">Street Address <span class="required">*</span></label><input id="street" name="street" autocomplete="street-address"><div id="streetError" class="error-text"></div></div>
+<div class="field"><label for="city">City <span class="required">*</span></label><input id="city" name="city" autocomplete="address-level2"><div id="cityError" class="error-text"></div></div>
+<div class="field"><label for="state">State <span class="required">*</span></label><input id="state" name="state" maxlength="30" autocomplete="address-level1"><div id="stateError" class="error-text"></div></div>
+<div class="field"><label for="zip">ZIP Code <span class="required">*</span></label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code"><div id="zipError" class="error-text"></div></div>
+<div class="field"><label for="phone">Phone Number <span class="required">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel"><div id="phoneError" class="error-text"></div></div>
+
+<h2>Purchase Information</h2>
+<div class="field"><label for="cardholder">Cardholder Name <span class="required">*</span></label><input id="cardholder" name="cardholder" autocomplete="cc-name"><div id="cardholderError" class="error-text"></div></div>
+<div class="field"><label for="cardNumber">Credit Card Number <span class="required">*</span></label><input id="cardNumber" name="cardNumber" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456"><div id="cardNumberError" class="error-text"></div></div>
+<div class="field"><label for="expiration">Expiration Date <span class="required">*</span></label><input id="expiration" name="expiration" autocomplete="cc-exp" placeholder="MM/YY"><div id="expirationError" class="error-text"></div></div>
+<div class="field"><label for="securityCode">Security Code <span class="required">*</span></label><input id="securityCode" name="securityCode" inputmode="numeric" autocomplete="cc-csc" placeholder="123"><div id="securityCodeError" class="error-text"></div></div>
+
+<div id="checkoutSuccess" class="success-box" role="status"></div><div id="checkoutError" class="error-box" role="alert"></div>
+<button class="btn full" type="submit">Complete Demo Purchase</button>
+<p class="help">Class project only: this page validates input but does not process real payment information.</p>
+</form>
+
+<aside class="summary-card"><h2>Order Summary</h2><div id="checkoutSummary"></div>
+<div class="field"><label for="couponCode">Coupon Code</label><input id="couponCode" name="couponCode" placeholder="Try GALAXY10 or GAME15"><div id="couponMessage" class="help"></div></div>
+<button id="applyCoupon" class="btn secondary full" type="button">Apply Coupon</button>
+<p class="help"><strong>GALAXY10</strong> gives 10% off the whole order. <strong>GAME15</strong> gives 15% off products in the Game category.</p>
+</aside>
+</div></section>
+</main>
+<footer><div class="container">Game Galaxy • Secure-style demo checkout for a classroom project</div></footer>
+</body></html>
